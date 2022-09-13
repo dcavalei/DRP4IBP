@@ -1,0 +1,10 @@
+version: '3.7'
+
+services:
+  honeygain:
+    image: honeygain/honeygain
+    environment:
+      - ACCOUNT_EMAIL
+      - ACCOUNT_PASSWORD
+      - DEVICE_NAME
+    command: -tou-accept -email ${ACCOUNT_EMAIL} -pass ${ACCOUNT_PASSWORD} -device ${DEVICE_NAME}
